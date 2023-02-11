@@ -1,0 +1,25 @@
+@import "../../styles/variables.scss";
+@import "../../styles/global.scss";
+
+.header {
+    position: absolute;
+    background-image: url('https://img.freepik.com/premium-vector/abstract-background-with-dynamic-effect-modern-pattern-suitable-for-wallpaper_272375-870.jpg');
+    width: 100%;
+    height: 90px;
+    top: 0;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.defaultButton {
+    border-color: '#fff';
+    border-width: 1;
+        border-radius: 25;
+    padding: 15, 30, 30, 15;
+
+}
