@@ -25,7 +25,7 @@ const SpaceWorkClient = (props) => {
 
             console.log('jsonDATA', jsonDATA);
 
-            const response = await fetch('http://82.202.194.12:4000/payment', {
+            const response = await fetch('https://kuku12875.ru:4000/payment', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',

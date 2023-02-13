@@ -24,9 +24,9 @@ const Home = () => {
     const submit = async (e: SyntheticEvent) => {
         e.preventDefault();
         try {
-        const response = await fetch('http://82.202.194.12:4000/auth/signin', {
+        const response = await fetch('https://kuku12875.ru:4000/auth/signin', {
             method: 'POST',
-            headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'http://82.202.194.12:4000'},
+            headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'https://kuku12875.ru:4000'},
             credentials: 'include',
             body: JSON.stringify({
                 login: email,
@@ -45,9 +45,9 @@ const Home = () => {
 
     async function logg(searchLogin, pass) {
         try {
-            const response = await fetch('http://82.202.194.12:4000/auth/signin', {
+            const response = await fetch('https://kuku12875.ru:4000/auth/signin', {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'http://82.202.194.12:4000'},
+                headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'http://kuku12875.ru:4000'},
                 credentials: 'include',
                 body: JSON.stringify({
                     login: searchLogin,

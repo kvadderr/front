@@ -6,7 +6,7 @@ const UserCard = (props) => {
     
    async function _sendRequestToWithdrawal() {
     try {
-        const response = await fetch('http://82.202.194.12:4000/withdrawals', {
+        const response = await fetch('https://kuku12875.ru:4000/withdrawals', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

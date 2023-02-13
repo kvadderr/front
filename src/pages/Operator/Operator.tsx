@@ -11,7 +11,7 @@ import { setUser } from '../../redux/actions'
 
 const getPadTime = (time) => time.toString().padStart(2, '0');
 
-const socket = io.connect("http://82.202.194.12/:4000/");
+const socket = io.connect("https://kuku12875.ru:4000/");
 const Operator = () => {
     const [isConnected, setIsConnected] = useState(false);
     const [calling, setCalling] = useState(false);
@@ -102,7 +102,7 @@ const Operator = () => {
     
     async function getReviews() {
         try {
-            const response = await fetch('http://82.202.194.12:4000/review/'+user.id);
+            const response = await fetch('https://kuku12875.ru:4000/review/'+user.id);
             const json = await response.json();
             setReview(json);
             console.log('review', review);
@@ -113,7 +113,7 @@ const Operator = () => {
 
     async function getCall() {
         try {
-            const response = await fetch('http://82.202.194.12:4000/call/operator/'+user.id);
+            const response = await fetch('https:/kuku12875.ru:4000/call/operator/'+user.id);
             const json = await response.json();
             setCallHistory(json);
             console.log('review', review);
@@ -124,7 +124,7 @@ const Operator = () => {
 
     async function getStat() {
         try {
-            const response = await fetch('http://82.202.194.12:4000/analytics/operatorStat/'+user.id);
+            const response = await fetch('https://kuku12875.ru:4000/analytics/operatorStat/'+user.id);
             const json = await response.json();
             setStatistic(json);
         } catch (error) {
