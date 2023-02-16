@@ -12,15 +12,15 @@ const Home = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
-    console.log('from', from);
+    console.log('from', location.state);
     
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [redirect, setRedirect] = useState(false);
 
     const [searchParams, setSearchParams] = useSearchParams();
-    const searchLogin = searchParams.get("login");
-    const pass = searchParams.get("pass");
+    const searchLogin = location.state?.searchLogin;
+    const pass = location.state?.pass;
 
     const submit = async (e: SyntheticEvent) => {
         e.preventDefault();
