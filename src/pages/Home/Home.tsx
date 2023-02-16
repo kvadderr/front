@@ -59,8 +59,14 @@ const Home = () => {
             const roles = content.role;
             setAuth({ content, roles });
             dispatch(setUser(content));
-            if (from === '/') navigate('/client', { replace: true });
-            else navigate(from, { replace: true }); 
+            if (from === '/'){
+                navigate('/client', { replace: true });
+                console.log("navigate('/client', { replace: true });")
+            }
+            else {
+                navigate(from, { replace: true }); 
+                console.log("navigate(from, { replace: true });");
+            }
         } catch (err){
             console.log(err);
         }
