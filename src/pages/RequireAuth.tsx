@@ -9,8 +9,8 @@ const RequireAuth = ({ allowedRoles }) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const searchLogin = searchParams.get("login");
     const pass = searchParams.get("pass");
-    console.log('LOOOOOOOOGIN', login);
-    
+    console.log('LOOOOOOOOGIN', searchLogin);
+
     return (
         allowedRoles?.includes(auth?.roles)
             ? <Outlet />
