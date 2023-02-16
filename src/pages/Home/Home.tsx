@@ -12,6 +12,7 @@ const Home = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
+    console.log('from', from);
     
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -58,7 +59,8 @@ const Home = () => {
             const roles = content.role;
             setAuth({ content, roles });
             dispatch(setUser(content));
-            navigate(from, { replace: true });
+            if (from) navigate(from, { replace: true });
+            else navigate('/client', { replace: true });
         } catch (err){
             console.log(err);
         }
