@@ -64,8 +64,8 @@ const Home = () => {
                 console.log("navigate('/client', { replace: true });")
             }
             else {
-                navigate(from, { replace: true }); 
                 console.log("navigate(from, { replace: true });");
+                navigate(from, { replace: true }); 
             }
         } catch (err){
             console.log(err);
